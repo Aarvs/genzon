@@ -7,8 +7,8 @@ import App from './App.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Auth0Provider
-      domain='dev-onayv68m8z6yy8nq.us.auth0.com' 
-      clientId='1rfeVwGizTJT5ugAZfrgIIddv8MOGI54'
+      domain=Process.env.DOMAIN 
+      clientId=process.env.CLIENT_ID
       authorizationParams={{
         redirect_uri: window.location.origin
       }}
