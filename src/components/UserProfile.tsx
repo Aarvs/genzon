@@ -5,7 +5,8 @@ import FileManagement from './FileManagement';
 const UserProfile = () => {
   const [value, setValue] = useState(0);
 
-  const handleChange = (newValue: number) => {
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    event.preventDefault();
     setValue(newValue);
   };
 
@@ -13,7 +14,7 @@ const UserProfile = () => {
     <div>
       <Typography variant="h4" className="flex justify-center !mb-5">List Your Products</Typography>
       <div className="flex justify-center">
-        <Tabs value={value} onChange={() => handleChange}>
+        <Tabs value={value} onChange={handleChange}>
           <Tab label="Bulk Import" />
           <Tab label="Upload" />
         </Tabs>
