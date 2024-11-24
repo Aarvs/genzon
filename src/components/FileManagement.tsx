@@ -8,8 +8,8 @@ interface FileManagementProps {
 
 const FileManagement: React.FC<FileManagementProps> = ({ activeTab }) => {
     return (
-      <div className="flex justify-center items-center m-4 overflow-x-hidden">
-        <div className="border-2 border-blue-500 p-2 rounded-md inline-block max-w-full">
+      <div className="w-full flex justify-center">
+        <div className="border-2 border-blue-500 p-6 rounded-lg w-full max-w-2xl shadow-sm">
           {activeTab === 0 && <BulkImport />}
           {activeTab === 1 && <Upload />}
         </div>
@@ -18,4 +18,3 @@ const FileManagement: React.FC<FileManagementProps> = ({ activeTab }) => {
 };
 
 export default FileManagement;
-
